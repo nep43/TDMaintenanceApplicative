@@ -1,0 +1,82 @@
+<mxfile host="65bd71144e">
+    <diagram name="Gestion d&#39;hotel UML" id="0">
+        <mxGraphModel dx="1728" dy="949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="swimlane;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="100" width="190" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Hotel" style="text;html=1;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="2" vertex="1">
+                    <mxGeometry width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="chambres : vector&lt;Chambre&gt;&#xa;clients : vector&lt;Client&gt;&#xa;reservations : vector&lt;Reservation&gt;&#xa;personnels : vector&lt;Personnel&gt;" style="text;html=1;whiteSpace=wrap;" parent="2" vertex="1">
+                    <mxGeometry y="30" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="ajouterChambre(num: int, type: string, prix: double)&#xa;ajouterClient(id: int, nom: string, prenom: string)&#xa;creerReservation(indexClient: int, indexChambre: int, debut: string, fin: string)&#xa;ajouterPersonnel(nom: string, poste: string, salaire: double)&#xa;afficherReservations()" style="text;html=1;whiteSpace=wrap;" parent="2" vertex="1">
+                    <mxGeometry y="110" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="540" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Chambre" style="text;html=1;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="6" vertex="1">
+                    <mxGeometry width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="numero : int&#xa;type : string&#xa;prixParNuit : double&#xa;disponible : bool" style="text;html=1;whiteSpace=wrap;" parent="6" vertex="1">
+                    <mxGeometry y="30" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Chambre(num: int, t: string, prix: double)&#xa;afficherInfo()" style="text;html=1;whiteSpace=wrap;" parent="6" vertex="1">
+                    <mxGeometry y="90" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="313" y="350" width="200" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Client" style="text;html=1;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="10" vertex="1">
+                    <mxGeometry width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="id : int&#xa;nom : string&#xa;prenom : string" style="text;html=1;whiteSpace=wrap;" parent="10" vertex="1">
+                    <mxGeometry y="30" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Client(id: int, n: string, p: string)&#xa;afficherInfo()" style="text;html=1;whiteSpace=wrap;" parent="10" vertex="1">
+                    <mxGeometry y="90" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="585" width="220" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Reservation" style="text;html=1;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="14" vertex="1">
+                    <mxGeometry width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="client : Client*&#xa;chambre : Chambre*&#xa;dateDebut : string&#xa;dateFin : string&#xa;active : bool" style="text;html=1;whiteSpace=wrap;" parent="14" vertex="1">
+                    <mxGeometry y="30" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Reservation(c: Client*, ch: Chambre*, debut: string, fin: string)&#xa;afficherInfo()" style="text;html=1;whiteSpace=wrap;" parent="14" vertex="1">
+                    <mxGeometry y="110" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="90" width="200" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Personnel" style="text;html=1;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="18" vertex="1">
+                    <mxGeometry width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="nom : string&#xa;poste : string&#xa;salaire : double" style="text;html=1;whiteSpace=wrap;" parent="18" vertex="1">
+                    <mxGeometry y="30" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Personnel(n: string, p: string, s: double)&#xa;afficherInfo()" style="text;html=1;whiteSpace=wrap;" parent="18" vertex="1">
+                    <mxGeometry y="90" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" parent="1" source="2" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" parent="1" source="2" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" parent="1" source="2" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" parent="1" source="2" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
